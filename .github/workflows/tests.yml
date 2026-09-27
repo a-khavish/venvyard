@@ -1,0 +1,51 @@
+name: tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  pytest:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        # The README promises 3.8 and newer, so every claimed version is run.
+        python: ["3.8", "3.9", "3.10", "3.11", "3.12", "3.13"]
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+
+      - name: Install pytest
+        run: python -m pip install --upgrade pip pytest
+
+      - name: Install fish and zsh
+        # The shell snippets are parsed by the shells themselves; without
+        # these the relevant tests skip rather than fail, which would let a
+        # fish-only regression through unnoticed.
+        run: sudo apt-get update && sudo apt-get install -y --no-install-recommends fish zsh
+
+      - name: Run the suite
+        run: pytest -v
+
+      - name: Check the shell snippets parse
+        run: |
+          python -m venvyard --shell-init bash > /tmp/i.bash && bash -n /tmp/i.bash
+          python -m venvyard --shell-init zsh  > /tmp/i.zsh  && zsh  -n /tmp/i.zsh
+          python -m venvyard --shell-init fish > /tmp/i.fish && fish -n /tmp/i.fish
+          python -m venvyard --completion bash > /tmp/c.bash && bash -n /tmp/c.bash
+          python -m venvyard --completion fish > /tmp/c.fish && fish -n /tmp/c.fish
+
+      - name: Installer installs, reinstalls and uninstalls cleanly
+        run: |
+          set -eux
+          ./install.sh --prefix "$HOME/.vy-test"
+          ./install.sh --prefix "$HOME/.vy-test"   # must be idempotent
+          "$HOME/.vy-test/bin/venvyard" --version
+          ./install.sh --prefix "$HOME/.vy-test" --uninstall
+          test ! -e "$HOME/.vy-test/bin/venvyard"

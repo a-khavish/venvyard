@@ -1,0 +1,69 @@
+venvyard
+
+Copyright (c) 2026 Khavish Auckaloo. All rights reserved.
+
+================================================================================
+PROPRIETARY SOFTWARE LICENCE - ALL RIGHTS RESERVED
+================================================================================
+
+This software and its source code (the "Software") are the exclusive property
+of Khavish Auckaloo (the "Owner"). The Software is made publicly visible
+for reference, evaluation and portfolio purposes only.
+
+NO LICENCE IS GRANTED.
+
+Except for the limited permissions stated in "PERMITTED USE" below, no right or
+licence of any kind is granted to any person, whether by implication, estoppel
+or otherwise. In particular, and without limiting the foregoing, you may NOT:
+
+  1. copy, reproduce or republish the Software, in whole or in part;
+  2. modify, adapt, translate or create derivative works from the Software;
+  3. distribute, sublicense, sell, rent, lease or otherwise transfer the
+     Software or any part of it to any third party;
+  4. use the Software, or any portion of its source code, in any other
+     project, product or service, whether commercial or non-commercial;
+  5. remove, obscure or alter this notice or any copyright, attribution or
+     ownership notice contained in the Software.
+
+Only the Owner may modify the Software or authorise modifications to it.
+
+--------------------------------------------------------------------------------
+PERMITTED USE
+--------------------------------------------------------------------------------
+
+You may view and read the source code for the sole purposes of evaluation,
+study and review.
+
+If you obtained the Software from a public code-hosting platform, any copy
+created automatically by that platform's own mechanisms (for example a "fork"
+created on GitHub) is permitted only to the extent that the platform's Terms of
+Service require, and grants you no further rights whatsoever. You may not
+publish, distribute, modify or make any use of such a copy beyond viewing it.
+
+Any other use requires the Owner's prior written permission. To request
+permission, open an issue at https://github.com/a-khavish/venvyard/issues.
+
+--------------------------------------------------------------------------------
+NO WARRANTY
+--------------------------------------------------------------------------------
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+OWNER BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
+OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+The Software creates, modifies and deletes directories on your system. You are
+responsible for your own data and for maintaining your own backups.
+
+--------------------------------------------------------------------------------
+ENFORCEMENT
+--------------------------------------------------------------------------------
+
+Any use of the Software outside the permissions granted above terminates any
+tolerance immediately and may constitute copyright infringement under
+applicable law, including the Berne Convention and the national copyright laws
+of your jurisdiction.
+
+================================================================================

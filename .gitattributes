@@ -1,0 +1,11 @@
+# Keep shell scripts LF-only so they stay executable on every platform
+*.sh        text eol=lf
+install.sh  text eol=lf
+*.py        text eol=lf
+*.md        text eol=lf
+LICENSE     text eol=lf
+NOTICE      text eol=lf
+
+# Screenshots are binary
+*.png binary
+*.jpg binary
